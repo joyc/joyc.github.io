@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Hython's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-01-04T12:00:00+09:00</updated><entry><title>Markdown Examples Part 3</title><link href="/articles/2019/01/04/markdown-examples-part-3/" rel="alternate"></link><published>2019-01-04T12:00:00+09:00</published><updated>2019-01-04T12:00:00+09:00</updated><author><name>Hython</name></author><id>tag:None,2019-01-04:/articles/2019/01/04/markdown-examples-part-3/</id><summary type="html">&lt;p&gt;Code blocks are preceeded by an indent, three : symbols and the name of the language.&lt;br&gt;
+All of the following code will be highlighted while the text is indented.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;do_twice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;wrapper_do_twice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;wrapper_do_twice&lt;/span&gt;
+
+&lt;span class="nd"&gt;@do_twice&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;say_whee&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_text&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Whee …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Code blocks are preceeded by an indent, three : symbols and the name of the language.&lt;br&gt;
+All of the following code will be highlighted while the text is indented.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;do_twice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;wrapper_do_twice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;wrapper_do_twice&lt;/span&gt;
+
+&lt;span class="nd"&gt;@do_twice&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;say_whee&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_text&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Whee!&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;say_whee&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="markdown"></category><category term="pygments"></category></entry><entry><title>Markdown Examples Part 2</title><link href="/articles/2019/01/03/markdown-examples-part-2/" rel="alternate"></link><published>2019-01-03T12:00:00+09:00</published><updated>2019-01-03T12:00:00+09:00</updated><author><name>hython</name></author><id>tag:None,2019-01-03:/articles/2019/01/03/markdown-examples-part-2/</id><summary type="html">&lt;p&gt;Images can be displayed in Markdown.&lt;br&gt;
+Text within the square brackets is the image name. The path to the image goes between the round brackets.&lt;br&gt;
+The {static} tag indicates the image is stored in the content folder. This setting can be changed in pelicanconf.py.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="python logo" src="/img/python_icon.png"&gt;&lt;/p&gt;
+&lt;p&gt;Links to downloadable content such …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Images can be displayed in Markdown.&lt;br&gt;
+Text within the square brackets is the image name. The path to the image goes between the round brackets.&lt;br&gt;
+The {static} tag indicates the image is stored in the content folder. This setting can be changed in pelicanconf.py.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="python logo" src="/img/python_icon.png"&gt;&lt;/p&gt;
+&lt;p&gt;Links to downloadable content such as PDF files are written similarly to image files but with no ! symbol at the beginning.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/pdf/pelican.pdf"&gt;Pelican Documenation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A link to a different blog post on our website is written exactly the same.&lt;br&gt;
+Text within the square brackets can be clicked on to travel to the website between the curly brackets.
+The {filename} tag indicates we want to follow the link to a webpage rather than the static file it was generated from.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/articles/2019/01/01/my-first-blog-post/"&gt;First Post&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Or we can link to another external website by supplying the web address.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://pypi.org"&gt;Python Package Index&lt;/a&gt;&lt;/p&gt;</content><category term="markdown"></category></entry><entry><title>Markdown Examples Part 1</title><link href="/articles/2019/01/02/markdown-examples-part-1/" rel="alternate"></link><published>2019-01-02T12:00:00+09:00</published><updated>2019-01-02T12:00:00+09:00</updated><author><name>Hython</name></author><id>tag:None,2019-01-02:/articles/2019/01/02/markdown-examples-part-1/</id><summary type="html">&lt;p&gt;Basic markdown examples are shown below&lt;/p&gt;
+&lt;p&gt;This text is &lt;strong&gt;bold&lt;/strong&gt;
+This text is also &lt;strong&gt;bold&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This text is &lt;em&gt;italic&lt;/em&gt;
+This text is also &lt;em&gt;italic&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h1&gt;An h1 heading&lt;/h1&gt;
+&lt;h2&gt;An h2 heading&lt;/h2&gt;
+&lt;h3&gt;An h3 heading...&lt;/h3&gt;
+&lt;h6&gt;An h6 heading&lt;/h6&gt;
+&lt;p&gt;A list with numbers:  &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;One&lt;/li&gt;
+&lt;li&gt;Two&lt;/li&gt;
+&lt;li&gt;Three&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Basic markdown examples are shown below&lt;/p&gt;
+&lt;p&gt;This text is &lt;strong&gt;bold&lt;/strong&gt;
+This text is also &lt;strong&gt;bold&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This text is &lt;em&gt;italic&lt;/em&gt;
+This text is also &lt;em&gt;italic&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h1&gt;An h1 heading&lt;/h1&gt;
+&lt;h2&gt;An h2 heading&lt;/h2&gt;
+&lt;h3&gt;An h3 heading...&lt;/h3&gt;
+&lt;h6&gt;An h6 heading&lt;/h6&gt;
+&lt;p&gt;A list with numbers:  &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;One&lt;/li&gt;
+&lt;li&gt;Two&lt;/li&gt;
+&lt;li&gt;Three&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A list with bullets:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bullet&lt;/li&gt;
+&lt;li&gt;Bullet&lt;/li&gt;
+&lt;li&gt;Bullet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here's a blockquote:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Simple is better than complex&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here's a table:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Column1&lt;/th&gt;
+&lt;th&gt;Column 2&lt;/th&gt;
+&lt;th&gt;Column 3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Value 1&lt;/td&gt;
+&lt;td&gt;Value 2&lt;/td&gt;
+&lt;td&gt;Value 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Value 4&lt;/td&gt;
+&lt;td&gt;Value 5&lt;/td&gt;
+&lt;td&gt;Value 6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Value 7&lt;/td&gt;
+&lt;td&gt;Value 8&lt;/td&gt;
+&lt;td&gt;Value 9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</content><category term="markdown"></category></entry><entry><title>My First Blog Post</title><link href="/articles/2019/01/01/my-first-blog-post/" rel="alternate"></link><published>2019-01-01T09:00:00+09:00</published><updated>2019-01-01T09:00:00+09:00</updated><author><name>hython</name></author><id>tag:None,2019-01-01:/articles/2019/01/01/my-first-blog-post/</id><summary type="html">&lt;p&gt;Blog post content goes here&lt;/p&gt;
+&lt;p&gt;A list with numbers:
+1. One
+2. Two
+3. Three&lt;/p&gt;
+&lt;p&gt;A list with bullets:&lt;br&gt;
+&lt;em&gt; Bullet
+&lt;/em&gt; Bullet
+* Bullet&lt;/p&gt;
+&lt;p&gt;Here's a blockquote:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Simple is better than complex&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here's a table:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Column1&lt;/th&gt;
+&lt;th&gt;Column 2&lt;/th&gt;
+&lt;th&gt;Column 3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Value 1&lt;/td&gt;
+&lt;td&gt;Value 2&lt;/td&gt;
+&lt;td&gt;Value 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Value 4&lt;/td&gt;
+&lt;td&gt;Value 5&lt;/td&gt;
+&lt;td&gt;Value 6 …&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</summary><content type="html">&lt;p&gt;Blog post content goes here&lt;/p&gt;
+&lt;p&gt;A list with numbers:
+1. One
+2. Two
+3. Three&lt;/p&gt;
+&lt;p&gt;A list with bullets:&lt;br&gt;
+&lt;em&gt; Bullet
+&lt;/em&gt; Bullet
+* Bullet&lt;/p&gt;
+&lt;p&gt;Here's a blockquote:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Simple is better than complex&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here's a table:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Column1&lt;/th&gt;
+&lt;th&gt;Column 2&lt;/th&gt;
+&lt;th&gt;Column 3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Value 1&lt;/td&gt;
+&lt;td&gt;Value 2&lt;/td&gt;
+&lt;td&gt;Value 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Value 4&lt;/td&gt;
+&lt;td&gt;Value 5&lt;/td&gt;
+&lt;td&gt;Value 6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Value 7&lt;/td&gt;
+&lt;td&gt;Value 8&lt;/td&gt;
+&lt;td&gt;Value 9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</content><category term="python"></category><category term="markdown"></category><category term="pelican"></category></entry><entry><title>语法拾遗1：python文本字符串格式化输出总结</title><link href="/articles/2018/05/30/python-string-format/" rel="alternate"></link><published>2018-05-30T00:05:00+09:00</published><updated>2018-06-01T21:05:00+09:00</updated><author><name>hython</name></author><id>tag:None,2018-05-30:/articles/2018/05/30/python-string-format/</id><summary type="html">&lt;p&gt;本文主要总结了&lt;code&gt;format&lt;/code&gt;格式化输出文本的用法。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;替换字段使用&lt;code&gt;{}&lt;/code&gt;括起来，如果需要输出结果包含&lt;code&gt;{}&lt;/code&gt;则应使用{% raw %}&lt;code _="%" endraw&gt;{{}}&lt;/code&gt;双花括号转义。&lt;/p&gt;
+&lt;p&gt;:::python3
+In [1]: "{{test's string}}".format()
+Out[1]: "{test's string}"&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用未命名字段名替换和指定参数替换
+一般用法既可以使用未命名字段也可以指定参数，两种可单独使用也能混用，但是注意不能同时使用手动指定编号和自动编号：&lt;/p&gt;
+&lt;p&gt;:::python3&lt;/p&gt;
+&lt;h1&gt;混合使用法举例&lt;/h1&gt;
+&lt;p&gt;In [5]: "{foo} {} {bar} {}".format(2, 4, foo=1, bar=3)
+Out[5]: '1 2 3 4'&lt;/p&gt;
+&lt;h1&gt;通过索引指定时可以不管参数的顺序&lt;/h1&gt;
+&lt;p&gt;In [6]: "{foo} {1} {bar} {0}".format …&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;本文主要总结了&lt;code&gt;format&lt;/code&gt;格式化输出文本的用法。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;替换字段使用&lt;code&gt;{}&lt;/code&gt;括起来，如果需要输出结果包含&lt;code&gt;{}&lt;/code&gt;则应使用{% raw %}&lt;code _="%" endraw&gt;{{}}&lt;/code&gt;双花括号转义。&lt;/p&gt;
+&lt;p&gt;:::python3
+In [1]: "{{test's string}}".format()
+Out[1]: "{test's string}"&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用未命名字段名替换和指定参数替换
+一般用法既可以使用未命名字段也可以指定参数，两种可单独使用也能混用，但是注意不能同时使用手动指定编号和自动编号：&lt;/p&gt;
+&lt;p&gt;:::python3&lt;/p&gt;
+&lt;h1&gt;混合使用法举例&lt;/h1&gt;
+&lt;p&gt;In [5]: "{foo} {} {bar} {}".format(2, 4, foo=1, bar=3)
+Out[5]: '1 2 3 4'&lt;/p&gt;
+&lt;h1&gt;通过索引指定时可以不管参数的顺序&lt;/h1&gt;
+&lt;p&gt;In [6]: "{foo} {1} {bar} {0}".format(4, 2, foo=1, bar=3)
+Out[6]: '1 2 3 4'&lt;/p&gt;
+&lt;h1&gt;还可以使用引用&lt;/h1&gt;
+&lt;p&gt;In [8]: import math
+In [9]: tmp = "模块{mod.&lt;strong&gt;name&lt;/strong&gt;}中的圆周率π的默认值为{mod.pi}"
+In [10]: tmp.format(mod=math)
+Out[10]: '模块math中的圆周率π的默认值为3.141592653589793'&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
+&lt;li&gt;基本转换标识符的使用&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;三个标志&lt;code&gt;s&lt;/code&gt;、&lt;code&gt;r&lt;/code&gt;和&lt;code&gt;a&lt;/code&gt;分别是指使用&lt;code&gt;str&lt;/code&gt;、&lt;code&gt;repr&lt;/code&gt;和&lt;code&gt;ascii&lt;/code&gt;进行转换叹号&lt;code&gt;!&lt;/code&gt;之前的字符串：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{str!s}&lt;/span&gt;&lt;span class="s2"&gt; &lt;/span&gt;&lt;span class="si"&gt;{str!r}&lt;/span&gt;&lt;span class="s2"&gt; &lt;/span&gt;&lt;span class="si"&gt;{str!a}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;π&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;π &amp;#39;π&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;u03c0&amp;#39;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;格式说明符冒号&lt;code&gt;:&lt;/code&gt;的使用，一般其后跟类型说明符。比如表示定点数的&lt;code&gt;f&lt;/code&gt;以及表示二进制的&lt;code&gt;b&lt;/code&gt;。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 浮点小数格式&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;The number is &lt;/span&gt;&lt;span class="si"&gt;{:f}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;The number is 2018.000000&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;# 二进制格式&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;The number is &lt;/span&gt;&lt;span class="si"&gt;{:b}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;The number is 11111100010&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其他的格式表示类型如下表：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;代表格式&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;b&lt;/td&gt;
+&lt;td&gt;用二进制表示整数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;c&lt;/td&gt;
+&lt;td&gt;解读整数为Unicode码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;d&lt;/td&gt;
+&lt;td&gt;十进制整数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;e&lt;/td&gt;
+&lt;td&gt;科学计数表示法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;E&lt;/td&gt;
+&lt;td&gt;同&lt;code&gt;e&lt;/code&gt;，可表示指数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;f&lt;/td&gt;
+&lt;td&gt;指定位数的小数表示&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;F&lt;/td&gt;
+&lt;td&gt;同&lt;code&gt;f&lt;/code&gt;，对特殊值&lt;code&gt;inf&lt;/code&gt;和&lt;code&gt;nan&lt;/code&gt;使用大写表示&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;g&lt;/td&gt;
+&lt;td&gt;自动选择表示为小数或科学计数，小数时至少一位&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;G&lt;/td&gt;
+&lt;td&gt;同&lt;code&gt;g&lt;/code&gt;，但使用大写表示指数和特殊值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;n&lt;/td&gt;
+&lt;td&gt;同&lt;code&gt;g&lt;/code&gt;，但跟随地区区域显示位数分隔符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;o&lt;/td&gt;
+&lt;td&gt;整数表示为八进制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;s&lt;/td&gt;
+&lt;td&gt;默认，表示文本字符串&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;x&lt;/td&gt;
+&lt;td&gt;十六进制，其中使用小写字母&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;同&lt;code&gt;x&lt;/code&gt;, 其中使用大写字母&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;%&lt;/td&gt;
+&lt;td&gt;表示为百分比&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:&lt;/code&gt;后面用整数表示宽度和精度，需注意数字和文本的对齐位置不同，表示精度时前面要加小数点&lt;code&gt;.&lt;/code&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 宽度&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{:10}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;         2&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{:10}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;2         &amp;#39;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 精度&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{:.2f}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;3.14&amp;#39;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 宽度加精度&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{:10.5}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;    3.1416&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:&lt;/code&gt;后面跟&lt;code&gt;,&lt;/code&gt;逗号表示插入千位数分隔符（跟随地区格式）&lt;/p&gt;
+&lt;p&gt;:::python3
+ In [37]: '先挣他一个{:,}'.format(10**10)
+ Out[37]: '先挣他一个10,000,000,000'&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;指定左对齐、右对齐和居中，可在&lt;code&gt;:&lt;/code&gt;后分别使用&lt;code&gt;&amp;lt;&lt;/code&gt;、&lt;code&gt;&amp;gt;&lt;/code&gt;和&lt;code&gt;^&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;![三种对齐格式](https://upload-images.jianshu.io/upload_images/383-9b29f512da63f067.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+:::python3
+# :冒号后可接填充符，0则为用0填充
+In [40]: &amp;quot;{:w^12}&amp;quot;.format(&amp;quot; site &amp;quot;)
+Out[40]: &amp;#39;www site www&amp;#39;
+In [41]: &amp;quot;{:0&amp;amp;lt;10}&amp;quot;.format(1234)
+Out[41]: &amp;#39;1234000000&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在对齐符合后也可使用&lt;code&gt;+&lt;/code&gt;,&lt;code&gt;=&lt;/code&gt;,&lt;code&gt;#&lt;/code&gt;等分别表示在字符前显示正号，分离符号和文本，以及用不同进制显示，由于不常用在此不做介绍。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;综合运用案例：打印购物小票&lt;/h2&gt;
+&lt;p&gt;:::python3&lt;/p&gt;
+&lt;h1&gt;根据指定的宽度打印格式化小票&lt;/h1&gt;
+&lt;p&gt;width = int(input('输入宽度: '))&lt;/p&gt;
+&lt;p&gt;price_width = 10
+item_width = width - price_width&lt;/p&gt;
+&lt;p&gt;header_tmpl = "{{:{}}}{{:&amp;gt;{}}}".format(item_width, price_width)
+tmpl = "{{:{}}}{{:&amp;gt;{}.2f}}".format(item_width, price_width)&lt;/p&gt;
+&lt;p&gt;print('-' * width)&lt;/p&gt;
+&lt;p&gt;print(header_tmpl.format('商 品', '价 格'))&lt;/p&gt;
+&lt;p&gt;print('·' * width)&lt;/p&gt;
+&lt;p&gt;print(tmpl.format('面  粉', 6.5))
+print(tmpl.format('韭  菜', 3.5))
+print(tmpl.format('鸡  蛋', 10.0))
+print(tmpl.format('虾  仁', 18.6))
+print(tmpl.format('酱  油', 12))&lt;/p&gt;
+&lt;p&gt;print('-' * width)&lt;/p&gt;
+&lt;p&gt;最终显示结果为：&lt;/p&gt;
+&lt;p&gt;:::python3
+输入宽度: 30&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;商 品                     价 格
+······························
+面  粉                    6.50
+韭  菜                    3.50
+鸡  蛋                    10.00
+虾  仁                    18.60
+酱  油                    12.00&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;怎么样，这盘三鲜饺够味不。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以上部分内容参考自《python编程基础第三版》，感谢阅读，如果有遗漏欢迎留言补充。&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="Python"></category></entry></feed>

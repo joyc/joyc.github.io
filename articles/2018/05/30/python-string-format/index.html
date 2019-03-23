@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>语法拾遗1：python文本字符串格式化输出总结 - Hython's Blog</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/articles/2018/05/30/python-string-format/">
+
+        <meta name="author" content="hython" />
+        <meta name="keywords" content="Python" />
+        <meta name="description" content="本文主要总结了format格式化输出文本的用法。 替换字段使用{}括起来，如果需要输出结果包含{}则应使用{% raw %}{{}}双花括号转义。 :::python3 In [1]: &#34;{{test&#39;s string}}&#34;.format() Out[1]: &#34;{test&#39;s string}&#34; 使用未命名字段名替换和指定参数替换 一般用法既可以使用未命名字段也可以指定参数，两种可单独使用也能混用，但是注意不能同时使用手动指定编号和自动编号： :::python3 混合使用法举例 In [5]: &#34;{foo} {} {bar} {}&#34;.format(2, 4, foo=1, bar=3) Out[5]: &#39;1 2 3 4&#39; 通过索引指定时可以不管参数的顺序 In [6]: &#34;{foo} {1} {bar} {0}&#34;.format …" />
+
+        <meta property="og:site_name" content="Hython's Blog" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="语法拾遗1：python文本字符串格式化输出总结"/>
+        <meta property="og:url" content="/articles/2018/05/30/python-string-format/"/>
+        <meta property="og:description" content="本文主要总结了format格式化输出文本的用法。 替换字段使用{}括起来，如果需要输出结果包含{}则应使用{% raw %}{{}}双花括号转义。 :::python3 In [1]: &#34;{{test&#39;s string}}&#34;.format() Out[1]: &#34;{test&#39;s string}&#34; 使用未命名字段名替换和指定参数替换 一般用法既可以使用未命名字段也可以指定参数，两种可单独使用也能混用，但是注意不能同时使用手动指定编号和自动编号： :::python3 混合使用法举例 In [5]: &#34;{foo} {} {bar} {}&#34;.format(2, 4, foo=1, bar=3) Out[5]: &#39;1 2 3 4&#39; 通过索引指定时可以不管参数的顺序 In [6]: &#34;{foo} {1} {bar} {0}&#34;.format …"/>
+        <meta property="article:published_time" content="2018-05-30" />
+            <meta property="article:section" content="Python" />
+            <meta property="article:tag" content="Python" />
+            <meta property="article:author" content="hython" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.simplex.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Hython's Blog ATOM Feed"/>
+
+        <link href="/feeds/python.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Hython's Blog Python ATOM Feed"/>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+Hython's Blog            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="/pages/about-me/">
+                             About Me
+                          </a></li>
+                        <li >
+                            <a href="/category/blogging">Blogging</a>
+                        </li>
+                        <li class="active">
+                            <a href="/category/python">Python</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/articles/2018/05/30/python-string-format/"
+                       rel="bookmark"
+                       title="Permalink to 语法拾遗1：python文本字符串格式化输出总结">
+                        语法拾遗1：python文本字符串格式化输出总结
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2018-05-30T00:05:00+09:00"> Wed 30 May 2018</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python">Python</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>本文主要总结了<code>format</code>格式化输出文本的用法。</p>
+<ol>
+<li>
+<p>替换字段使用<code>{}</code>括起来，如果需要输出结果包含<code>{}</code>则应使用{% raw %}<code _="%" endraw>{{}}</code>双花括号转义。</p>
+<p>:::python3
+In [1]: "{{test's string}}".format()
+Out[1]: "{test's string}"</p>
+</li>
+<li>
+<p>使用未命名字段名替换和指定参数替换
+一般用法既可以使用未命名字段也可以指定参数，两种可单独使用也能混用，但是注意不能同时使用手动指定编号和自动编号：</p>
+<p>:::python3</p>
+<h1>混合使用法举例</h1>
+<p>In [5]: "{foo} {} {bar} {}".format(2, 4, foo=1, bar=3)
+Out[5]: '1 2 3 4'</p>
+<h1>通过索引指定时可以不管参数的顺序</h1>
+<p>In [6]: "{foo} {1} {bar} {0}".format(4, 2, foo=1, bar=3)
+Out[6]: '1 2 3 4'</p>
+<h1>还可以使用引用</h1>
+<p>In [8]: import math
+In [9]: tmp = "模块{mod.<strong>name</strong>}中的圆周率π的默认值为{mod.pi}"
+In [10]: tmp.format(mod=math)
+Out[10]: '模块math中的圆周率π的默认值为3.141592653589793'</p>
+</li>
+</ol>
+<!-- more -->
+
+<ol>
+<li>基本转换标识符的使用</li>
+<li>
+<p>三个标志<code>s</code>、<code>r</code>和<code>a</code>分别是指使用<code>str</code>、<code>repr</code>和<code>ascii</code>进行转换叹号<code>!</code>之前的字符串：</p>
+<div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">15</span><span class="p">]:</span> <span class="s2">&quot;</span><span class="si">{str!s}</span><span class="s2"> </span><span class="si">{str!r}</span><span class="s2"> </span><span class="si">{str!a}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="o">=</span><span class="s2">&quot;π&quot;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span> <span class="s2">&quot;π &#39;π&#39; &#39;</span><span class="se">\\</span><span class="s2">u03c0&#39;&quot;</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>格式说明符冒号<code>:</code>的使用，一般其后跟类型说明符。比如表示定点数的<code>f</code>以及表示二进制的<code>b</code>。</p>
+<div class="highlight"><pre><span></span><span class="c1"># 浮点小数格式</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">22</span><span class="p">]:</span> <span class="s2">&quot;The number is </span><span class="si">{:f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">2018</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">22</span><span class="p">]:</span> <span class="s1">&#39;The number is 2018.000000&#39;</span>
+<span class="c1"># 二进制格式</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">23</span><span class="p">]:</span> <span class="s2">&quot;The number is </span><span class="si">{:b}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">2018</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">23</span><span class="p">]:</span> <span class="s1">&#39;The number is 11111100010&#39;</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>其他的格式表示类型如下表：</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>代表格式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>b</td>
+<td>用二进制表示整数</td>
+</tr>
+<tr>
+<td>c</td>
+<td>解读整数为Unicode码</td>
+</tr>
+<tr>
+<td>d</td>
+<td>十进制整数</td>
+</tr>
+<tr>
+<td>e</td>
+<td>科学计数表示法</td>
+</tr>
+<tr>
+<td>E</td>
+<td>同<code>e</code>，可表示指数</td>
+</tr>
+<tr>
+<td>f</td>
+<td>指定位数的小数表示</td>
+</tr>
+<tr>
+<td>F</td>
+<td>同<code>f</code>，对特殊值<code>inf</code>和<code>nan</code>使用大写表示</td>
+</tr>
+<tr>
+<td>g</td>
+<td>自动选择表示为小数或科学计数，小数时至少一位</td>
+</tr>
+<tr>
+<td>G</td>
+<td>同<code>g</code>，但使用大写表示指数和特殊值</td>
+</tr>
+<tr>
+<td>n</td>
+<td>同<code>g</code>，但跟随地区区域显示位数分隔符</td>
+</tr>
+<tr>
+<td>o</td>
+<td>整数表示为八进制</td>
+</tr>
+<tr>
+<td>s</td>
+<td>默认，表示文本字符串</td>
+</tr>
+<tr>
+<td>x</td>
+<td>十六进制，其中使用小写字母</td>
+</tr>
+<tr>
+<td>X</td>
+<td>同<code>x</code>, 其中使用大写字母</td>
+</tr>
+<tr>
+<td>%</td>
+<td>表示为百分比</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><code>:</code>后面用整数表示宽度和精度，需注意数字和文本的对齐位置不同，表示精度时前面要加小数点<code>.</code>：</p>
+<div class="highlight"><pre><span></span><span class="c1"># 宽度</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">24</span><span class="p">]:</span> <span class="s2">&quot;</span><span class="si">{:10}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">24</span><span class="p">]:</span> <span class="s1">&#39;         2&#39;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">25</span><span class="p">]:</span> <span class="s2">&quot;</span><span class="si">{:10}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">25</span><span class="p">]:</span> <span class="s1">&#39;2         &#39;</span>
+
+<span class="c1"># 精度</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">30</span><span class="p">]:</span> <span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">30</span><span class="p">]:</span> <span class="s1">&#39;3.14&#39;</span>
+
+<span class="c1"># 宽度加精度</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">31</span><span class="p">]:</span> <span class="s2">&quot;</span><span class="si">{:10.5}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">31</span><span class="p">]:</span> <span class="s1">&#39;    3.1416&#39;</span>
+</pre></div>
+
+
+</li>
+<li>
+<p><code>:</code>后面跟<code>,</code>逗号表示插入千位数分隔符（跟随地区格式）</p>
+<p>:::python3
+ In [37]: '先挣他一个{:,}'.format(10**10)
+ Out[37]: '先挣他一个10,000,000,000'</p>
+</li>
+<li>
+<p>指定左对齐、右对齐和居中，可在<code>:</code>后分别使用<code>&lt;</code>、<code>&gt;</code>和<code>^</code>:</p>
+<div class="highlight"><pre><span></span>![三种对齐格式](https://upload-images.jianshu.io/upload_images/383-9b29f512da63f067.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+:::python3
+# :冒号后可接填充符，0则为用0填充
+In [40]: &quot;{:w^12}&quot;.format(&quot; site &quot;)
+Out[40]: &#39;www site www&#39;
+In [41]: &quot;{:0&amp;lt;10}&quot;.format(1234)
+Out[41]: &#39;1234000000&#39;
+</pre></div>
+
+
+</li>
+<li>
+<p>在对齐符合后也可使用<code>+</code>,<code>=</code>,<code>#</code>等分别表示在字符前显示正号，分离符号和文本，以及用不同进制显示，由于不常用在此不做介绍。</p>
+</li>
+</ul>
+<h2>综合运用案例：打印购物小票</h2>
+<p>:::python3</p>
+<h1>根据指定的宽度打印格式化小票</h1>
+<p>width = int(input('输入宽度: '))</p>
+<p>price_width = 10
+item_width = width - price_width</p>
+<p>header_tmpl = "{{:{}}}{{:&gt;{}}}".format(item_width, price_width)
+tmpl = "{{:{}}}{{:&gt;{}.2f}}".format(item_width, price_width)</p>
+<p>print('-' * width)</p>
+<p>print(header_tmpl.format('商 品', '价 格'))</p>
+<p>print('·' * width)</p>
+<p>print(tmpl.format('面  粉', 6.5))
+print(tmpl.format('韭  菜', 3.5))
+print(tmpl.format('鸡  蛋', 10.0))
+print(tmpl.format('虾  仁', 18.6))
+print(tmpl.format('酱  油', 12))</p>
+<p>print('-' * width)</p>
+<p>最终显示结果为：</p>
+<p>:::python3
+输入宽度: 30</p>
+<hr>
+<p>商 品                     价 格
+······························
+面  粉                    6.50
+韭  菜                    3.50
+鸡  蛋                    10.00
+虾  仁                    18.60
+酱  油                    12.00</p>
+<hr>
+<p>怎么样，这盘三鲜饺够味不。</p>
+<blockquote>
+<p>以上部分内容参考自《python编程基础第三版》，感谢阅读，如果有遗漏欢迎留言补充。</p>
+</blockquote>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://twitter.com/joyc"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/joyc"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="http://getpelican.com/" target="_blank">Pelican</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://python.org/" target="_blank">Python.org</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2019 hython
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+
+
+
+</body>
+</html>
