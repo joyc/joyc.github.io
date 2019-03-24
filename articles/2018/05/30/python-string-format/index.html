@@ -13,13 +13,13 @@
 
         <meta name="author" content="hython" />
         <meta name="keywords" content="Python" />
-        <meta name="description" content="本文主要总结了format格式化输出文本的用法。 替换字段使用{}括起来，如果需要输出结果包含{}则应使用{% raw %}{{}}双花括号转义。 :::python3 In [1]: &#34;{{test&#39;s string}}&#34;.format() Out[1]: &#34;{test&#39;s string}&#34; 使用未命名字段名替换和指定参数替换 一般用法既可以使用未命名字段也可以指定参数，两种可单独使用也能混用，但是注意不能同时使用手动指定编号和自动编号： :::python3 混合使用法举例 In [5]: &#34;{foo} {} {bar} {}&#34;.format(2, 4, foo=1, bar=3) Out[5]: &#39;1 2 3 4&#39; 通过索引指定时可以不管参数的顺序 In [6]: &#34;{foo} {1} {bar} {0}&#34;.format …" />
+        <meta name="description" content="本文主要总结了format格式化输出文本的用法。 替换字段使用{}括起来，如果需要输出结果包含{}则应使用{% raw %}{{}}双花括号转义。 In [1]: &#34;{{test&#39;s string}}&#34;.format() Out[1]: &#34;{test&#39;s string}&#34; 使用未命名字段名替换和指定参数替换 一般用法既可以使用未命名字段也可以指定参数，两种可单独使用也能混用，但是注意不能同时使用手动指定编号和自动编号： 混合使用法举例 ::: In [5]: &#34;{foo} {} {bar} {}&#34;.format(2, 4, foo=1, bar=3) Out[5]: &#39;1 2 3 4&#39; 通过索引指定时可以不管参数的顺序 In [6]: &#34;{foo} {1} {bar} {0}&#34;.format(4, 2 …" />
 
         <meta property="og:site_name" content="Hython's Blog" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="语法拾遗1：python文本字符串格式化输出总结"/>
         <meta property="og:url" content="/articles/2018/05/30/python-string-format/"/>
-        <meta property="og:description" content="本文主要总结了format格式化输出文本的用法。 替换字段使用{}括起来，如果需要输出结果包含{}则应使用{% raw %}{{}}双花括号转义。 :::python3 In [1]: &#34;{{test&#39;s string}}&#34;.format() Out[1]: &#34;{test&#39;s string}&#34; 使用未命名字段名替换和指定参数替换 一般用法既可以使用未命名字段也可以指定参数，两种可单独使用也能混用，但是注意不能同时使用手动指定编号和自动编号： :::python3 混合使用法举例 In [5]: &#34;{foo} {} {bar} {}&#34;.format(2, 4, foo=1, bar=3) Out[5]: &#39;1 2 3 4&#39; 通过索引指定时可以不管参数的顺序 In [6]: &#34;{foo} {1} {bar} {0}&#34;.format …"/>
+        <meta property="og:description" content="本文主要总结了format格式化输出文本的用法。 替换字段使用{}括起来，如果需要输出结果包含{}则应使用{% raw %}{{}}双花括号转义。 In [1]: &#34;{{test&#39;s string}}&#34;.format() Out[1]: &#34;{test&#39;s string}&#34; 使用未命名字段名替换和指定参数替换 一般用法既可以使用未命名字段也可以指定参数，两种可单独使用也能混用，但是注意不能同时使用手动指定编号和自动编号： 混合使用法举例 ::: In [5]: &#34;{foo} {} {bar} {}&#34;.format(2, 4, foo=1, bar=3) Out[5]: &#39;1 2 3 4&#39; 通过索引指定时可以不管参数的顺序 In [6]: &#34;{foo} {1} {bar} {0}&#34;.format(4, 2 …"/>
         <meta property="article:published_time" content="2018-05-30" />
             <meta property="article:section" content="Python" />
             <meta property="article:tag" content="Python" />
@@ -28,17 +28,14 @@
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.simplex.min.css" type="text/css"/>
+        <link rel="stylesheet" href="/theme/css/bootstrap.lumen.min.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
     <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
 
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Hython's Blog ATOM Feed"/>
 
-        <link href="/feeds/python.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Hython's Blog Python ATOM Feed"/>
+
 </head>
 <body>
 
@@ -113,55 +110,44 @@ Hython's Blog            </a>
 <ol>
 <li>
 <p>替换字段使用<code>{}</code>括起来，如果需要输出结果包含<code>{}</code>则应使用{% raw %}<code _="%" endraw>{{}}</code>双花括号转义。</p>
-<p>:::python3
-In [1]: "{{test's string}}".format()
-Out[1]: "{test's string}"</p>
+<p><code>In [1]: "{{test's string}}".format()
+Out[1]: "{test's string}"</code></p>
 </li>
 <li>
-<p>使用未命名字段名替换和指定参数替换
-一般用法既可以使用未命名字段也可以指定参数，两种可单独使用也能混用，但是注意不能同时使用手动指定编号和自动编号：</p>
-<p>:::python3</p>
-<h1>混合使用法举例</h1>
-<p>In [5]: "{foo} {} {bar} {}".format(2, 4, foo=1, bar=3)
+<p>使用未命名字段名替换和指定参数替换</p>
+<p>一般用法既可以使用未命名字段也可以指定参数，两种可单独使用也能混用，但是注意不能同时使用手动指定编号和自动编号：
+混合使用法举例</p>
+<p>:::
+In [5]: "{foo} {} {bar} {}".format(2, 4, foo=1, bar=3)
 Out[5]: '1 2 3 4'</p>
-<h1>通过索引指定时可以不管参数的顺序</h1>
+<h1 id="_1">通过索引指定时可以不管参数的顺序</h1>
 <p>In [6]: "{foo} {1} {bar} {0}".format(4, 2, foo=1, bar=3)
 Out[6]: '1 2 3 4'</p>
-<h1>还可以使用引用</h1>
+<h1 id="_2">还可以使用引用</h1>
 <p>In [8]: import math
 In [9]: tmp = "模块{mod.<strong>name</strong>}中的圆周率π的默认值为{mod.pi}"
 In [10]: tmp.format(mod=math)
 Out[10]: '模块math中的圆周率π的默认值为3.141592653589793'</p>
 </li>
-</ol>
-<!-- more -->
-
-<ol>
-<li>基本转换标识符的使用</li>
 <li>
-<p>三个标志<code>s</code>、<code>r</code>和<code>a</code>分别是指使用<code>str</code>、<code>repr</code>和<code>ascii</code>进行转换叹号<code>!</code>之前的字符串：</p>
-<div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">15</span><span class="p">]:</span> <span class="s2">&quot;</span><span class="si">{str!s}</span><span class="s2"> </span><span class="si">{str!r}</span><span class="s2"> </span><span class="si">{str!a}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="o">=</span><span class="s2">&quot;π&quot;</span><span class="p">)</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span> <span class="s2">&quot;π &#39;π&#39; &#39;</span><span class="se">\\</span><span class="s2">u03c0&#39;&quot;</span>
-</pre></div>
-
-
-</li>
-<li>
-<p>格式说明符冒号<code>:</code>的使用，一般其后跟类型说明符。比如表示定点数的<code>f</code>以及表示二进制的<code>b</code>。</p>
-<div class="highlight"><pre><span></span><span class="c1"># 浮点小数格式</span>
-<span class="n">In</span> <span class="p">[</span><span class="mi">22</span><span class="p">]:</span> <span class="s2">&quot;The number is </span><span class="si">{:f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">2018</span><span class="p">)</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">22</span><span class="p">]:</span> <span class="s1">&#39;The number is 2018.000000&#39;</span>
-<span class="c1"># 二进制格式</span>
-<span class="n">In</span> <span class="p">[</span><span class="mi">23</span><span class="p">]:</span> <span class="s2">&quot;The number is </span><span class="si">{:b}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">2018</span><span class="p">)</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">23</span><span class="p">]:</span> <span class="s1">&#39;The number is 11111100010&#39;</span>
-</pre></div>
-
-
-</li>
+<p>基本转换标识符的使用</p>
+<ul>
+<li>三个标志<code>s</code>、<code>r</code>和<code>a</code>分别是指使用<code>str</code>、<code>repr</code>和<code>ascii</code>进行转换叹号<code>!</code>之前的字符串：</li>
+</ul>
+<p>In [15]: "{str!s} {str!r} {str!a}".format(str="π")
+Out[15]: "π 'π' '\u03c0'"</p>
+<ul>
+<li>格式说明符冒号<code>:</code>的使用，一般其后跟类型说明符。比如表示定点数的<code>f</code>以及表示二进制的<code>b</code>。</li>
+</ul>
+<h1 id="_3">浮点小数格式</h1>
+<p>In [22]: "The number is {:f}".format(2018)
+Out[22]: 'The number is 2018.000000'</p>
+<h1 id="_4">二进制格式</h1>
+<p>In [23]: "The number is {:b}".format(2018)
+Out[23]: 'The number is 11111100010'</p>
+<ul>
 <li>
 <p>其他的格式表示类型如下表：</p>
-</li>
-</ol>
 <table>
 <thead>
 <tr>
@@ -232,55 +218,45 @@ Out[10]: '模块math中的圆周率π的默认值为3.141592653589793'</p>
 </tr>
 </tbody>
 </table>
-<ul>
+</li>
 <li>
 <p><code>:</code>后面用整数表示宽度和精度，需注意数字和文本的对齐位置不同，表示精度时前面要加小数点<code>.</code>：</p>
-<div class="highlight"><pre><span></span><span class="c1"># 宽度</span>
-<span class="n">In</span> <span class="p">[</span><span class="mi">24</span><span class="p">]:</span> <span class="s2">&quot;</span><span class="si">{:10}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">24</span><span class="p">]:</span> <span class="s1">&#39;         2&#39;</span>
-
-<span class="n">In</span> <span class="p">[</span><span class="mi">25</span><span class="p">]:</span> <span class="s2">&quot;</span><span class="si">{:10}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">25</span><span class="p">]:</span> <span class="s1">&#39;2         &#39;</span>
-
-<span class="c1"># 精度</span>
-<span class="n">In</span> <span class="p">[</span><span class="mi">30</span><span class="p">]:</span> <span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">30</span><span class="p">]:</span> <span class="s1">&#39;3.14&#39;</span>
-
-<span class="c1"># 宽度加精度</span>
-<span class="n">In</span> <span class="p">[</span><span class="mi">31</span><span class="p">]:</span> <span class="s2">&quot;</span><span class="si">{:10.5}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">31</span><span class="p">]:</span> <span class="s1">&#39;    3.1416&#39;</span>
-</pre></div>
-
-
 </li>
-<li>
-<p><code>:</code>后面跟<code>,</code>逗号表示插入千位数分隔符（跟随地区格式）</p>
-<p>:::python3
- In [37]: '先挣他一个{:,}'.format(10**10)
+</ul>
+<p>:::python3</p>
+<h1 id="_5">宽度</h1>
+<p>In [24]: "{:10}".format(2)
+Out[24]: '         2'</p>
+<p>In [25]: "{:10}".format("2")
+Out[25]: '2         '</p>
+<h1 id="_6">精度</h1>
+<p>In [30]: "{:.2f}".format(math.pi)
+Out[30]: '3.14'</p>
+<h1 id="_7">宽度加精度</h1>
+<p>In [31]: "{:10.5}".format(math.pi)
+Out[31]: '    3.1416'</p>
+<ul>
+<li><code>:</code>后面跟<code>,</code>逗号表示插入千位数分隔符（跟随地区格式）</li>
+</ul>
+<p>In [37]: '先挣他一个{:,}'.format(10**10)
  Out[37]: '先挣他一个10,000,000,000'</p>
-</li>
+<ul>
 <li>
 <p>指定左对齐、右对齐和居中，可在<code>:</code>后分别使用<code>&lt;</code>、<code>&gt;</code>和<code>^</code>:</p>
-<div class="highlight"><pre><span></span>![三种对齐格式](https://upload-images.jianshu.io/upload_images/383-9b29f512da63f067.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-:::python3
-# :冒号后可接填充符，0则为用0填充
-In [40]: &quot;{:w^12}&quot;.format(&quot; site &quot;)
-Out[40]: &#39;www site www&#39;
-In [41]: &quot;{:0&amp;lt;10}&quot;.format(1234)
-Out[41]: &#39;1234000000&#39;
-</pre></div>
-
-
+<p><img alt="三种对齐格式" src="https://upload-images.jianshu.io/upload_images/383-9b29f512da63f067.jpg"></p>
+</li>
+</ul>
+<h1 id="00">:冒号后可接填充符，0则为用0填充</h1>
+<p>In [40]: "{:w^12}".format(" site ")
+Out[40]: 'www site www'
+In [41]: "{:0&lt;10}".format(1234)
+Out[41]: '1234000000'</p>
 </li>
 <li>
 <p>在对齐符合后也可使用<code>+</code>,<code>=</code>,<code>#</code>等分别表示在字符前显示正号，分离符号和文本，以及用不同进制显示，由于不常用在此不做介绍。</p>
-</li>
-</ul>
-<h2>综合运用案例：打印购物小票</h2>
-<p>:::python3</p>
-<h1>根据指定的宽度打印格式化小票</h1>
-<p>width = int(input('输入宽度: '))</p>
+<h5>综合运用案例：根据指定的宽度打印格式化购物小票</h5>
+<p>:::python3
+width = int(input('输入宽度: '))</p>
 <p>price_width = 10
 item_width = width - price_width</p>
 <p>header_tmpl = "{{:{}}}{{:&gt;{}}}".format(item_width, price_width)
@@ -294,24 +270,57 @@ print(tmpl.format('鸡  蛋', 10.0))
 print(tmpl.format('虾  仁', 18.6))
 print(tmpl.format('酱  油', 12))</p>
 <p>print('-' * width)</p>
+</li>
+</ol>
 <p>最终显示结果为：</p>
-<p>:::python3
-输入宽度: 30</p>
-<hr>
-<p>商 品                     价 格
+<div class="highlight"><pre><span></span>输入宽度: <span class="m">30</span>
+------------------------------
+商 品                     价 格
 ······························
-面  粉                    6.50
-韭  菜                    3.50
-鸡  蛋                    10.00
-虾  仁                    18.60
-酱  油                    12.00</p>
-<hr>
+面  粉                    <span class="m">6</span>.50
+韭  菜                    <span class="m">3</span>.50
+鸡  蛋                    <span class="m">10</span>.00
+虾  仁                    <span class="m">18</span>.60
+酱  油                    <span class="m">12</span>.00
+------------------------------
+</pre></div>
+
+
 <p>怎么样，这盘三鲜饺够味不。</p>
 <blockquote>
 <p>以上部分内容参考自《python编程基础第三版》，感谢阅读，如果有遗漏欢迎留言补充。</p>
 </blockquote>
             </div>
             <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'hython'; // required: replace example with your forum shortname
+
+            var disqus_config = function () {
+                this.language = "en";
+
+                        this.page.identifier = '2018-05-30-python-string-format';
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
         </article>
     </section>
 
@@ -363,7 +372,11 @@ print(tmpl.format('酱  油', 12))</p>
          <div class="col-xs-10">&copy; 2019 hython
             &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
-            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>                <p><small>  <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
          <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
       </div>
    </div>
@@ -377,6 +390,38 @@ print(tmpl.format('酱  油', 12))</p>
 <script src="/theme/js/respond.min.js"></script>
 
 
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'hython'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-136778315-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
 
 
 </body>
