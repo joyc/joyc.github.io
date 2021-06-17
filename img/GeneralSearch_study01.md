@@ -19,7 +19,7 @@ editor:
 ---
 # 基盤汎用検索
 ## 勉強会１
-### 【クレカ連携機能概要】
+### 【汎用検索概要】
 
 2021/06/17
 
@@ -30,14 +30,14 @@ editor:
 
 1. 汎用検索は何
 1. 汎用検索仕組み
-1. クレカ連携機能説明
+1. 利用Tips
 ---
 <!-- .slide: data-auto-animate -->
 ## 目 次
 
 1. <div data-id="box" style="height: 50px; background: grey;">汎用検索は何</div>
 1. 汎用検索仕組み
-1. クレカ連携機能説明
+1. 利用Tips
 ---
 <!-- .slide: data-auto-animate -->
 ## 汎用検索は何
@@ -103,7 +103,7 @@ Note:
 
 1. 汎用検索は何
 1. <div data-id="box" style="height: 50px; background: grey;">汎用検索仕組み</div>
-1. クレカ連携機能説明
+1. 利用Tips
 ---
 <!-- .slide: data-auto-animate -->
 ## アーキテクチャ
