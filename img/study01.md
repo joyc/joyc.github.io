@@ -24,6 +24,10 @@ editor:
 2021/06/17
 
 @chuang.li
+
+Note:
+お疲れ様です。
+今日の勉強会は基盤汎用検索についてご紹介させていただきます。
 ---
 <!-- .slide: data-auto-animate -->
 ## 目 次
@@ -31,6 +35,9 @@ editor:
 1. 汎用検索は何
 1. 汎用検索仕組み
 1. 利用Tips
+
+Note:
+汎用検索の概念、仕組み、利用tipsの順番で説明していきます。
 ---
 <!-- .slide: data-auto-animate -->
 ## 目 次
@@ -38,6 +45,9 @@ editor:
 1. <div data-id="box" style="height: 50px; background: grey;">汎用検索は何</div>
 1. 汎用検索仕組み
 1. 利用Tips
+
+Note:
+まず一番目、汎用検索は何？
 ---
 <!-- .slide: data-auto-animate -->
 ## 汎用検索は何
@@ -48,7 +58,9 @@ editor:
 🥴 <!-- .element: class="fragment " data-fragment-index="1" -->
 
 Note:
-参照資料の紹介
+定義を見ると、こうなっています:xxxxxx何を言っているのか、ちょっと理解しづらいですね。
+私最初に見た時もちょっと分からなかったです。
+
 ---
 <!-- .slide: data-auto-animate -->
 ## 汎用検索は何
@@ -59,7 +71,7 @@ Note:
 🤔
 
 Note:
-参照資料の紹介
+特に、ここ、自動化していない施策の施策はなに?対象となる顧客数の確認の対象はなんだろう?
 ---
 <!-- .slide: data-auto-animate -->
 
@@ -70,6 +82,7 @@ Note:
 </div>
 
 Note:
+実は、施策の属性(ゾクセイ)はレギュラーと非レギュラー二種類に分かれていて
 定期、長期的な施策
 要件が明確な施策
 
@@ -85,6 +98,7 @@ PoC実験的な施策
 </div>
 
 Note:
+対象あるいはターゲットの属性はご覧の2種類に分かれています。オレンジの部分は定期、定量、定常。赤の部分は非明確、あるいは自由です。
 決まってる施策を決まってるデータテーブルを分析し、決まってるルートで決まってる対象者に配信する。（新規ユーザwelcome）
 施策自由、データマート上あるデータ、SMC以外他システム、用途が広い。
 ---
@@ -97,6 +111,12 @@ Note:
 </div>
 
 😀 <!-- .element: class="fragment " data-fragment-index="1" -->
+
+Note:
+そして、対象者リストの連携方法について、
+定期、定量、定常なら自動、smc／bp,
+非明確なら汎用検索の登場です。あるいは手動です。
+ここで汎用検索の定義は少し明確になったのではないかと思います。
 ---
 <!-- .slide: data-auto-animate -->
 ## 目 次
@@ -104,6 +124,9 @@ Note:
 1. 汎用検索は何
 1. <div data-id="box" style="height: 50px; background: grey;">汎用検索仕組み</div>
 1. 利用Tips
+
+Note:
+次、汎用検索の仕組みについてご説明いたします。
 ---
 <!-- .slide: data-auto-animate -->
 ## アーキテクチャ
@@ -114,13 +137,13 @@ Note:
 <!-- .slide: data-auto-animate -->
 ## アプリ配置概要
 
-<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/89709/ab260e15-979f-f255-b74e-da874cb74775.png" width="60%">
+<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/89709/ab260e15-979f-f255-b74e-da874cb74775.png" width="40%">
 
 ---
 <!-- .slide: data-auto-animate -->
 ## アプリ配置概要
 
-<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/89709/6834bfbe-8a81-02fa-d558-5213a1ea3000.png" width="60%">
+<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/89709/6834bfbe-8a81-02fa-d558-5213a1ea3000.png" width="40%">
 
 ---
 <!-- .slide: data-auto-animate -->
@@ -162,6 +185,16 @@ Note:
 
 Note:
 7CEちょっと特殊なので、次回で紹介させていただきます。
+---
+<!-- .slide: data-auto-animate -->
+## 目 次
+
+1. 汎用検索は何
+1. 汎用検索仕組み
+1. <div data-id="box" style="height: 50px; background: grey;">利用Tips</div>
+
+Note:
+最後は、汎用検索の利用Tipsについてご紹介いたします。
 ---
 ## テストデータ作成 Tips
 
